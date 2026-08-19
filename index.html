@@ -6,84 +6,155 @@
     <title>Enlaces Inalámbricos</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #eef4f9;
-            color: #222;
-            line-height: 1.6;
+            background: #080b1a;
+            color: #e8ecff;
+            line-height: 1.7;
         }
 
+        /* ENCABEZADO */
         header {
-            background: linear-gradient(135deg, #0d1647, #1f3091);
-            color: white;
+            min-height: 330px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             padding: 50px 20px;
+            background:
+                radial-gradient(circle at top left, #3d1b78, transparent 40%),
+                radial-gradient(circle at bottom right, #064b83, transparent 40%),
+                linear-gradient(135deg, #080b1a, #111936);
+            border-bottom: 2px solid #5965ff;
         }
 
         header h1 {
-            font-size: 45px;
-            margin-bottom: 10px;
+            font-size: 50px;
+            margin: 0 0 10px;
+            color: #ffffff;
+            text-shadow:
+                0 0 10px #536dfe,
+                0 0 25px #7c4dff,
+                0 0 45px #00bfff;
         }
 
         header p {
             font-size: 20px;
+            color: #bfc9ff;
+            margin: 0;
         }
 
+        /* MENÚ */
         nav {
-            background-color: #03132e;
+            background: rgba(7, 10, 30, 0.95);
             text-align: center;
-            padding: 15px;
+            padding: 18px 10px;
             position: sticky;
             top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #3845a3;
+            box-shadow: 0 0 20px rgba(83, 109, 254, 0.25);
         }
 
         nav a {
-            color: white;
+            display: inline-block;
+            color: #dce2ff;
             text-decoration: none;
-            margin: 0 12px;
+            margin: 5px 8px;
+            padding: 9px 15px;
+            border: 1px solid transparent;
+            border-radius: 20px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #4db8ff;
+            color: white;
+            border-color: #6c63ff;
+            background: rgba(92, 70, 255, 0.18);
+            box-shadow: 0 0 12px #5c6cff;
+            transform: translateY(-2px);
         }
 
+        /* SECCIONES */
         section {
-            width: 85%;
-            max-width: 1000px;
-            margin: 30px auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px #c7c7c7;
+            width: 88%;
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 32px;
+            background: linear-gradient(
+                145deg,
+                rgba(20, 27, 58, 0.96),
+                rgba(13, 18, 40, 0.96)
+            );
+            border: 1px solid #303c86;
+            border-radius: 18px;
+            box-shadow:
+                0 0 15px rgba(69, 86, 255, 0.18),
+                inset 0 0 20px rgba(90, 70, 255, 0.04);
+            transition: 0.3s;
+        }
+
+        section:hover {
+            border-color: #5969ff;
+            box-shadow:
+                0 0 25px rgba(83, 109, 254, 0.28),
+                inset 0 0 20px rgba(90, 70, 255, 0.06);
         }
 
         h2 {
-            color: #0b4f9c;
-            border-bottom: 2px solid #0b4f9c;
-            padding-bottom: 8px;
+            color: #7c9cff;
+            font-size: 28px;
+            border-bottom: 2px solid #5666ff;
+            padding-bottom: 10px;
+            text-shadow: 0 0 8px rgba(96, 112, 255, 0.6);
         }
 
         h3 {
-            color: #1269b0;
+            color: #8da9ff;
+            font-size: 21px;
         }
 
+        p {
+            color: #d4d9f2;
+        }
+
+        /* INFORMACIÓN DESTACADA */
         .destacado {
-            background-color: #e5f2ff;
-            border-left: 5px solid #0b5cad;
-            padding: 18px;
-            margin: 20px 0;
+            background: linear-gradient(
+                90deg,
+                rgba(40, 53, 130, 0.45),
+                rgba(91, 55, 150, 0.25)
+            );
+            border-left: 4px solid #7c5cff;
+            padding: 20px;
+            margin: 22px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(124, 92, 255, 0.15);
         }
 
+        /* LISTAS */
         ul {
             padding-left: 25px;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #d8def9;
         }
 
+        li::marker {
+            color: #7c8cff;
+        }
+
+        /* TARJETAS */
         .tarjetas {
             display: flex;
             flex-wrap: wrap;
@@ -93,18 +164,97 @@
         .tarjeta {
             flex: 1;
             min-width: 250px;
-            background-color: #f1f7fc;
-            padding: 20px;
-            border-radius: 10px;
-            border-top: 4px solid #0b5cad;
+            padding: 22px;
+            background: linear-gradient(
+                145deg,
+                #141b3b,
+                #0e132b
+            );
+            border: 1px solid #35429b;
+            border-radius: 15px;
+            transition: 0.3s;
+            box-shadow: 0 0 12px rgba(72, 86, 255, 0.12);
         }
 
-        footer {
-            background-color: #03132e;
+        .tarjeta:hover {
+            transform: translateY(-7px);
+            border-color: #6878ff;
+            box-shadow:
+                0 0 15px #5666ff,
+                0 0 30px rgba(120, 70, 255, 0.3);
+        }
+
+        .tarjeta h3 {
+            margin-top: 0;
+            color: #8ba5ff;
+        }
+
+        /* BOTÓN */
+        .boton {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 22px;
             color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #4c5cff, #8b4dff);
+            box-shadow: 0 0 15px rgba(92, 76, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            transform: scale(1.05);
+            box-shadow:
+                0 0 20px #6372ff,
+                0 0 35px #8b4dff;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            margin-top: 50px;
+            padding: 35px 20px;
             text-align: center;
-            padding: 25px;
-            margin-top: 40px;
+            background:
+                linear-gradient(135deg, #070916, #101936);
+            border-top: 2px solid #4d5cff;
+            box-shadow: 0 -5px 25px rgba(74, 87, 255, 0.15);
+        }
+
+        footer p {
+            margin: 7px;
+            color: #b9c2ee;
+        }
+
+        footer strong {
+            color: #8294ff;
+            font-size: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            section {
+                width: 94%;
+                padding: 22px;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 7px 10px;
+            }
+
+            .tarjeta {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
@@ -121,7 +271,9 @@
     <a href="#funcionamiento">Funcionamiento</a>
     <a href="#elementos">Elementos</a>
     <a href="#tipos">Tipos</a>
+    <a href="#factores">Factores</a>
     <a href="#ventajas">Ventajas</a>
+    <a href="#aplicaciones">Aplicaciones</a>
     <a href="#seguridad">Seguridad</a>
 </nav>
 
@@ -146,7 +298,7 @@
     </p>
 
     <div class="destacado">
-        <strong>Idea principal:</strong>
+        <strong>💡 Idea principal:</strong>
         Un enlace inalámbrico permite que la información viaje de un punto
         a otro a través del aire, sin necesidad de utilizar un cable físico
         como medio de transmisión.
@@ -183,12 +335,12 @@
 
 <section id="elementos">
 
-    <h2>Elementos de un enlace inalámbrico</h2>
+    <h2>📡 Elementos de un enlace inalámbrico</h2>
 
     <div class="tarjetas">
 
         <div class="tarjeta">
-            <h3>Transmisor</h3>
+            <h3>📤 Transmisor</h3>
             <p>
                 Es el dispositivo que envía la información mediante una
                 señal inalámbrica.
@@ -196,7 +348,7 @@
         </div>
 
         <div class="tarjeta">
-            <h3>Receptor</h3>
+            <h3>📥 Receptor</h3>
             <p>
                 Es el dispositivo encargado de recibir la señal y convertirla
                 nuevamente en información.
@@ -204,7 +356,7 @@
         </div>
 
         <div class="tarjeta">
-            <h3>Antena</h3>
+            <h3>📶 Antena</h3>
             <p>
                 Permite transmitir y recibir ondas electromagnéticas.
                 Dependiendo del tipo de enlace puede tener diferentes formas
@@ -213,7 +365,7 @@
         </div>
 
         <div class="tarjeta">
-            <h3>Medio de propagación</h3>
+            <h3>🌐 Medio de propagación</h3>
             <p>
                 Es el espacio por donde viajan las ondas electromagnéticas
                 entre el transmisor y el receptor.
@@ -226,11 +378,12 @@
 
 <section id="tipos">
 
-    <h2>Tipos de enlaces inalámbricos</h2>
- <div class="tarjetas">
+    <h2>📶 Tipos de enlaces inalámbricos</h2>
+
+    <div class="tarjetas">
 
         <div class="tarjeta">
-            <h3>Radio</h3>
+            <h3>📻 Radio</h3>
             <p>
                 Utiliza ondas de radio para transmitir información. Es
                 ampliamente utilizado en comunicaciones de voz, datos y
@@ -239,61 +392,62 @@
         </div>
 
         <div class="tarjeta">
-            <h3>Wi-Fi</h3>
+            <h3>📡 Wi-Fi</h3>
             <p>
-                Es una de las tecnologías inalámbricas más utilizadas. Permite
-                conectar computadoras, teléfonos, televisores y otros dispositivos
-                a una red local y, generalmente, a Internet.
+                Es una de las tecnologías inalámbricas más utilizadas.
+                Permite conectar computadoras, teléfonos, televisores y otros
+                dispositivos a una red local y, generalmente, a Internet.
             </p>
         </div>
 
         <div class="tarjeta">
-            <h3>Bluetooth</h3>
+            <h3>🔵 Bluetooth</h3>
             <p>
-                Es una tecnología diseñada para comunicaciones inalámbricas de
-                corto alcance. Se utiliza, por ejemplo, para conectar teléfonos
-                con audífonos, bocinas, teclados, mouse y otros dispositivos.
+                Es una tecnología diseñada para comunicaciones inalámbricas
+                de corto alcance. Se utiliza para conectar teléfonos con
+                audífonos, bocinas, teclados, mouse y otros dispositivos.
             </p>
         </div>
 
         <div class="tarjeta">
-            <h3>Microondas</h3>
+            <h3>📡 Microondas</h3>
             <p>
-                Los enlaces de microondas permiten realizar comunicaciones a
-                distancias mayores mediante antenas. Son utilizados en redes de
-                telecomunicaciones y conexiones entre diferentes puntos.
+                Los enlaces de microondas permiten realizar comunicaciones
+                a distancias mayores mediante antenas. Son utilizados en
+                redes de telecomunicaciones y conexiones entre diferentes puntos.
             </p>
         </div>
 
         <div class="tarjeta">
-            <h3>Infrarrojo</h3>
+            <h3>🔴 Infrarrojo</h3>
             <p>
-                Utiliza radiación infrarroja para transmitir información. Su
-                utilización requiere normalmente una distancia corta y puede
-                verse afectada por obstáculos entre el transmisor y el receptor.
+                Utiliza radiación infrarroja para transmitir información.
+                Su utilización requiere normalmente una distancia corta y
+                puede verse afectada por obstáculos.
             </p>
         </div>
 
+        <div class="tarjeta">
+            <h3>📱 Redes móviles</h3>
+            <p>
+                Las redes celulares permiten que teléfonos y otros dispositivos
+                puedan comunicarse y acceder a Internet mediante estaciones
+                base distribuidas en diferentes zonas.
+            </p>
+        </div>
 
-<div class="tarjeta">
-    <h3>Redes móviles</h3>
-    <p>
-        Las redes celulares permiten que teléfonos y otros dispositivos
-        puedan comunicarse y acceder a Internet mediante estaciones base
-        distribuidas en diferentes zonas.
-    </p>
-</div>
+    </div>
 
-</div>
 </section>
- <section id="factores">
 
-    <h2>Factores que afectan un enlace inalámbrico</h2>
+<section id="factores">
+
+    <h2>⚙️ Factores que afectan un enlace inalámbrico</h2>
 
     <p>
-        Un enlace inalámbrico no siempre funciona de la misma manera. La
-        calidad y velocidad de la comunicación pueden verse afectadas por
-        diferentes factores.
+        Un enlace inalámbrico no siempre funciona de la misma manera.
+        La calidad y velocidad de la comunicación pueden verse afectadas
+        por diferentes factores.
     </p>
 
     <ul>
@@ -313,41 +467,43 @@
 </section>
 
 <section id="ventajas">
-   
- <h2>Ventajas y Desventajas de los enlaces inalámbricos</h2>
- <div class="tarjetas"></div>
+
+    <h2>⚡ Ventajas y desventajas</h2>
+
+    <div class="tarjetas">
 
         <div class="tarjeta">
+            <h3>✅ Ventajas</h3>
 
-    <h2>Ventajas</h2>
+            <ul>
+                <li>Permiten transmitir información sin utilizar cables.</li>
+                <li>Facilitan la movilidad de los dispositivos.</li>
+                <li>Son útiles donde instalar cables resulta difícil.</li>
+                <li>Permiten conectar varios dispositivos a una misma red.</li>
+                <li>Su instalación puede ser más sencilla que el cableado físico.</li>
+                <li>Permiten crear conexiones temporales o permanentes.</li>
+            </ul>
+        </div>
 
-    <ul>
-        <li>Permiten transmitir información sin utilizar cables.</li>
-        <li>Facilitan la movilidad de los dispositivos.</li>
-        <li>Son útiles en lugares donde instalar cables resulta difícil.</li>
-        <li>Permiten conectar varios dispositivos a una misma red.</li>
-        <li>Su instalación puede ser más sencilla que la instalación de cableado físico.</li>
-        <li>Permiten crear conexiones temporales o permanentes.</li>
-    </ul>
+        <div class="tarjeta">
+            <h3>⚠️ Desventajas</h3>
 
-        </div> 
- <div class="tarjeta">
-    
-    <h2>Desventajas</h2>
+            <ul>
+                <li>La señal puede disminuir con la distancia.</li>
+                <li>Puede existir interferencia de otras señales.</li>
+                <li>Los obstáculos pueden afectar la comunicación.</li>
+                <li>Una red inalámbrica mal protegida puede presentar riesgos de seguridad.</li>
+                <li>La velocidad y estabilidad pueden variar dependiendo del entorno.</li>
+            </ul>
+        </div>
 
-    <ul>
-        <li>La señal puede disminuir con la distancia.</li>
-        <li>Puede existir interferencia de otras señales.</li>
-        <li>Los obstáculos pueden afectar la comunicación.</li>
-        <li>Una red inalámbrica mal protegida puede presentar riesgos de seguridad.</li>
-        <li>La velocidad y estabilidad pueden variar dependiendo del entorno.</li>
-    </ul>
+    </div>
 
-</section id="aplicaciones">
+</section>
 
-<section>
+<section id="aplicaciones">
 
-    <h2>Aplicaciones de los enlaces inalámbricos</h2>
+    <h2>🌐 Aplicaciones de los enlaces inalámbricos</h2>
 
     <p>
         Los enlaces inalámbricos están presentes en muchas actividades
@@ -368,7 +524,7 @@
 
 <section id="seguridad">
 
-    <h2>Seguridad en las redes inalámbricas</h2>
+    <h2>🔐 Seguridad en las redes inalámbricas</h2>
 
     <p>
         La seguridad es una parte importante de cualquier red inalámbrica.
@@ -385,7 +541,7 @@
     </p>
 
     <div class="destacado">
-        <strong>Importante:</strong>
+        <strong>🔒 Importante:</strong>
         Una red inalámbrica segura ayuda a proteger la información y los
         dispositivos conectados frente a accesos no autorizados.
     </div>
@@ -394,7 +550,7 @@
 
 <section>
 
-    <h2>Importancia de los enlaces inalámbricos</h2>
+    <h2>🚀 Importancia de los enlaces inalámbricos</h2>
 
     <p>
         Los enlaces inalámbricos son fundamentales en la actualidad porque
@@ -417,7 +573,7 @@
 
 <footer>
 
-    <p><strong>Proyecto: Enlaces Inalámbricos</strong></p>
+    <p><strong>🌌 PROYECTO: ENLACES INALÁMBRICOS</strong></p>
     <p>Realizado por: Ever José Xiloj Rivas</p>
     <p>Bachillerato en Computación</p>
 
