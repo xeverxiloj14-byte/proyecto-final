@@ -7,189 +7,392 @@
 
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #3902588e;
+            font-family: Arial, sans-serif;
+            background-color: #eef4f9;
             color: #222;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #320347;
-            color: rgb(243, 1, 1);
+            background: linear-gradient(135deg, #0d1647, #1f3091);
+            color: white;
             text-align: center;
-            padding: 30px;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
         }
 
         nav {
-            background-color: #2c084e;
+            background-color: #03132e;
             text-align: center;
             padding: 15px;
+            position: sticky;
+            top: 0;
         }
 
         nav a {
-            color: rgba(175, 12, 12, 0.664);
+            color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 12px;
             font-weight: bold;
         }
 
         nav a:hover {
-            color: #99171781;
+            color: #4db8ff;
         }
 
         section {
+            width: 85%;
+            max-width: 1000px;
+            margin: 30px auto;
             background-color: white;
-            max-width: 900px;
-            margin: 25px auto;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #c7c7c7;
         }
 
         h2 {
-            color: #00324b;
+            color: #0b4f9c;
+            border-bottom: 2px solid #0b4f9c;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #1269b0;
+        }
+
+        .destacado {
+            background-color: #e5f2ff;
+            border-left: 5px solid #0b5cad;
+            padding: 18px;
+            margin: 20px 0;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
         }
 
         .tarjetas {
             display: flex;
-            gap: 20px;
             flex-wrap: wrap;
+            gap: 20px;
         }
 
         .tarjeta {
             flex: 1;
-            min-width: 220px;
-            background-color: #6239887a;
+            min-width: 250px;
+            background-color: #f1f7fc;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
+            border-top: 4px solid #0b5cad;
         }
 
         footer {
-            background-color: #28055f;
-            color: rgb(255, 255, 255);
+            background-color: #03132e;
+            color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 25px;
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Enlaces Inalámbricos</h1>
-        <p>Comunicación y transmisión de datos sin utilizar cables</p>
-    </header>
+<header>
+    <h1>ENLACES INALÁMBRICOS</h1>
+    <p>Comunicación y transmisión de datos sin utilizar cables</p>
+</header>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#tipos">Tipos</a>
-        <a href="#ventajas">Ventajas</a>
-        <a href="#desventajas">Desventajas</a>
-    </nav>
+<nav>
+    <a href="#introduccion">Introducción</a>
+    <a href="#funcionamiento">Funcionamiento</a>
+    <a href="#elementos">Elementos</a>
+    <a href="#tipos">Tipos</a>
+    <a href="#ventajas">Ventajas</a>
+    <a href="#seguridad">Seguridad</a>
+</nav>
 
-    <section id="inicio">
-        <h2>¿Qué son los enlaces inalámbricos?</h2>
+<section id="introduccion">
 
-        <p>
-            Los enlaces inalámbricos son sistemas de comunicación que permiten
-            transmitir información entre dos o más dispositivos sin utilizar
-            cables físicos. Para realizar la transmisión utilizan ondas
-            electromagnéticas, como ondas de radio, microondas o infrarrojos.
-        </p>
+    <h2>¿Qué son los enlaces inalámbricos?</h2>
 
-        <p>
-            Estos enlaces son utilizados en redes de computadoras,
-            telecomunicaciones, acceso a Internet y sistemas de comunicación
-            a larga distancia.
-        </p>
-    </section>
+    <p>
+        Los enlaces inalámbricos son sistemas de comunicación que permiten
+        transmitir información entre dos o más dispositivos sin utilizar
+        cables físicos. Para realizar esta transmisión se utilizan ondas
+        electromagnéticas, principalmente ondas de radio, microondas y,
+        en algunos casos, luz infrarroja.
+    </p>
 
-    <section id="tipos"> 
-    
-         <h2>Tipos de enlaces inalámbricos</h2> <style>
-       body {   font-family: Arial, sans-serif;
-        /* font-size: 45px} */}
-    
+    <p>
+        Este tipo de comunicación es utilizado actualmente en hogares,
+        empresas, instituciones educativas, industrias y sistemas de
+        telecomunicaciones. Tecnologías como Wi-Fi, Bluetooth y las redes
+        móviles utilizan diferentes formas de comunicación inalámbrica para
+        intercambiar información.
+    </p>
 
-</style>
+    <div class="destacado">
+        <strong>Idea principal:</strong>
+        Un enlace inalámbrico permite que la información viaje de un punto
+        a otro a través del aire, sin necesidad de utilizar un cable físico
+        como medio de transmisión.
+    </div>
 
-        <div class="tarjetas">
+</section>
 
-            <div class="tarjeta"> 
-                <h3>Wi-Fi</h3>
-                <p>
-                    Permite conectar computadoras, teléfonos y otros dispositivos
-                    a una red local sin utilizar cables.
-                </p>
-            </div>
+<section id="funcionamiento">
 
-            <div class="tarjeta">
-                <h3>Bluetooth</h3>
-                <p>
-                    Se utiliza principalmente para conectar dispositivos cercanos,
-                    como audífonos, teléfonos, teclados y bocinas.
-                </p>
-            </div>
+    <h2>¿Cómo funcionan los enlaces inalámbricos?</h2>
 
-            <div class="tarjeta">
-                <h3>Microondas</h3>
-                <p>
-                    Permiten establecer enlaces inalámbricos entre puntos
-                    separados por grandes distancias.
-                </p>
-            </div>
+    <p>
+        Para establecer un enlace inalámbrico se necesita un dispositivo
+        que transmita la información y otro que pueda recibirla. El
+        transmisor convierte los datos en una señal electromagnética y
+        utiliza una antena para enviarla.
+    </p>
 
-            <div class="tarjeta">
-                <h3>Infrarrojo</h3>
-                <p>
-                    Utiliza luz infrarroja para transmitir información a
-                    distancias cortas.
-                </p>
-            </div>
+    <p>
+        La señal se propaga por el espacio hasta llegar al dispositivo
+        receptor. La antena receptora captura la señal y el equipo la
+        convierte nuevamente en información que puede ser utilizada por
+        una computadora, teléfono, router u otro dispositivo.
+    </p>
 
+    <p>
+        La calidad de un enlace inalámbrico depende de diferentes factores,
+        como la distancia entre los dispositivos, la potencia de la señal,
+        los obstáculos físicos, las interferencias y las condiciones del
+        entorno.
+    </p>
+
+</section>
+
+<section id="elementos">
+
+    <h2>Elementos de un enlace inalámbrico</h2>
+
+    <div class="tarjetas">
+
+        <div class="tarjeta">
+            <h3>Transmisor</h3>
+            <p>
+                Es el dispositivo que envía la información mediante una
+                señal inalámbrica.
+            </p>
         </div>
-    </section>
 
-    <section id="ventajas">
-        <h2>Ventajas</h2>
+        <div class="tarjeta">
+            <h3>Receptor</h3>
+            <p>
+                Es el dispositivo encargado de recibir la señal y convertirla
+                nuevamente en información.
+            </p>
+        </div>
 
-        <ul>
-            <li>Permiten movilidad de los dispositivos.</li>
-            <li>Reducen la necesidad de utilizar cables.</li>
-            <li>Facilitan la instalación de redes.</li>
-            <li>Pueden cubrir grandes distancias dependiendo de la tecnología.</li>
-            <li>Permiten conectar diferentes tipos de dispositivos.</li>
-        </ul>
-    </section>
+        <div class="tarjeta">
+            <h3>Antena</h3>
+            <p>
+                Permite transmitir y recibir ondas electromagnéticas.
+                Dependiendo del tipo de enlace puede tener diferentes formas
+                y características.
+            </p>
+        </div>
 
-    <section id="desventajas">
-        <h2>Desventajas</h2>
+        <div class="tarjeta">
+            <h3>Medio de propagación</h3>
+            <p>
+                Es el espacio por donde viajan las ondas electromagnéticas
+                entre el transmisor y el receptor.
+            </p>
+        </div>
 
-        <ul>
-            <li>La señal puede verse afectada por obstáculos.</li>
-            <li>Puede existir interferencia de otras señales.</li>
-            <li>La velocidad puede variar según la distancia.</li>
-            <li>Las redes inalámbricas requieren medidas de seguridad.</li>
-        </ul>
-    </section>
+    </div>
 
-    <section>
-        <h2>Ejemplos de uso</h2>
+</section>
 
-        <p>
-            Los enlaces inalámbricos se utilizan en hogares, escuelas,
-            empresas, hospitales y sistemas de telecomunicaciones.
-            Algunos ejemplos son las redes Wi-Fi, las conexiones Bluetooth
-            y los enlaces de microondas utilizados para conectar diferentes
-            puntos geográficos.
-        </p>
-    </section>
+<section id="tipos">
 
-    <footer>
-        <p>Proyecto sobre Enlaces Inalámbricos</p>
-        <p>© 2026 - Todos los derechos reservados</p>
-    </footer>
+    <h2>Tipos de enlaces inalámbricos</h2>
+
+    <h3>Wi-Fi</h3>
+    <p>
+        Es una de las tecnologías inalámbricas más utilizadas. Permite
+        conectar computadoras, teléfonos, televisores y otros dispositivos
+        a una red local y, generalmente, a Internet.
+    </p>
+
+    <h3>Bluetooth</h3>
+    <p>
+        Es una tecnología diseñada para comunicaciones inalámbricas de
+        corto alcance. Se utiliza, por ejemplo, para conectar teléfonos
+        con audífonos, bocinas, teclados, mouse y otros dispositivos.
+    </p>
+
+    <h3>Microondas</h3>
+    <p>
+        Los enlaces de microondas permiten realizar comunicaciones a
+        distancias mayores mediante antenas. Son utilizados en redes de
+        telecomunicaciones y conexiones entre diferentes puntos.
+    </p>
+
+    <h3>Infrarrojo</h3>
+    <p>
+        Utiliza radiación infrarroja para transmitir información. Su
+        utilización requiere normalmente una distancia corta y puede
+        verse afectada por obstáculos entre el transmisor y el receptor.
+    </p>
+
+    <h3>Redes móviles</h3>
+    <p>
+        Las redes celulares permiten que teléfonos y otros dispositivos
+        puedan comunicarse y acceder a Internet mediante estaciones base
+        distribuidas en diferentes zonas.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Factores que afectan un enlace inalámbrico</h2>
+
+    <p>
+        Un enlace inalámbrico no siempre funciona de la misma manera. La
+        calidad y velocidad de la comunicación pueden verse afectadas por
+        diferentes factores.
+    </p>
+
+    <ul>
+        <li><strong>Distancia:</strong> mientras mayor sea la distancia, la señal puede debilitarse.</li>
+
+        <li><strong>Obstáculos:</strong> paredes, edificios, árboles y otros objetos pueden afectar la señal.</li>
+
+        <li><strong>Interferencias:</strong> otros dispositivos y redes que utilizan frecuencias cercanas pueden provocar interferencias.</li>
+
+        <li><strong>Potencia:</strong> la potencia de transmisión influye en el alcance del enlace.</li>
+
+        <li><strong>Antenas:</strong> el tipo, orientación y ubicación de las antenas pueden mejorar o disminuir la calidad de la comunicación.</li>
+
+        <li><strong>Condiciones ambientales:</strong> en algunos enlaces de larga distancia, las condiciones atmosféricas pueden influir en la propagación de la señal.</li>
+    </ul>
+
+</section>
+
+<section id="ventajas">
+
+    <h2>Ventajas de los enlaces inalámbricos</h2>
+
+    <ul>
+        <li>Permiten transmitir información sin utilizar cables.</li>
+        <li>Facilitan la movilidad de los dispositivos.</li>
+        <li>Son útiles en lugares donde instalar cables resulta difícil.</li>
+        <li>Permiten conectar varios dispositivos a una misma red.</li>
+        <li>Su instalación puede ser más sencilla que la instalación de cableado físico.</li>
+        <li>Permiten crear conexiones temporales o permanentes.</li>
+    </ul>
+
+    <h2>Desventajas</h2>
+
+    <ul>
+        <li>La señal puede disminuir con la distancia.</li>
+        <li>Puede existir interferencia de otras señales.</li>
+        <li>Los obstáculos pueden afectar la comunicación.</li>
+        <li>Una red inalámbrica mal protegida puede presentar riesgos de seguridad.</li>
+        <li>La velocidad y estabilidad pueden variar dependiendo del entorno.</li>
+    </ul>
+
+</section>
+
+<section>
+
+    <h2>Aplicaciones de los enlaces inalámbricos</h2>
+
+    <p>
+        Los enlaces inalámbricos están presentes en muchas actividades
+        cotidianas y profesionales. Algunos de sus principales usos son:
+    </p>
+
+    <ul>
+        <li>Acceso a Internet mediante redes Wi-Fi.</li>
+        <li>Comunicación entre teléfonos celulares.</li>
+        <li>Conexión de computadoras y dispositivos en una red.</li>
+        <li>Conexión de audífonos, teclados y bocinas mediante Bluetooth.</li>
+        <li>Comunicación entre edificios mediante enlaces de radio o microondas.</li>
+        <li>Sistemas de comunicación y monitoreo.</li>
+        <li>Transmisión de información en empresas e instituciones.</li>
+    </ul>
+
+</section>
+
+<section id="seguridad">
+
+    <h2>Seguridad en las redes inalámbricas</h2>
+
+    <p>
+        La seguridad es una parte importante de cualquier red inalámbrica.
+        Debido a que la información se transmite por medio de ondas de
+        radio, una red debe utilizar mecanismos de protección para evitar
+        accesos no autorizados.
+    </p>
+
+    <p>
+        Algunas medidas recomendadas son utilizar contraseñas seguras,
+        mantener actualizado el router, utilizar protocolos modernos de
+        seguridad y evitar compartir las credenciales de acceso con
+        personas desconocidas.
+    </p>
+
+    <div class="destacado">
+        <strong>Importante:</strong>
+        Una red inalámbrica segura ayuda a proteger la información y los
+        dispositivos conectados frente a accesos no autorizados.
+    </div>
+
+</section>
+
+<section>
+
+    <h2>Importancia de los enlaces inalámbricos</h2>
+
+    <p>
+        Los enlaces inalámbricos son fundamentales en la actualidad porque
+        permiten mantener conectados a millones de dispositivos sin depender
+        de conexiones físicas. Gracias a esta tecnología podemos acceder a
+        Internet desde diferentes lugares, comunicarnos mediante teléfonos
+        móviles y utilizar dispositivos que se conectan entre sí de manera
+        inalámbrica.
+    </p>
+
+    <p>
+        Además, estas tecnologías continúan evolucionando para ofrecer
+        mejores velocidades, mayor cobertura, menor latencia y conexiones
+        más seguras. Por esta razón, conocer cómo funcionan los enlaces
+        inalámbricos es importante para comprender una parte fundamental
+        de las telecomunicaciones modernas.
+    </p>
+
+</section>
+
+<footer>
+
+    <p><strong>Proyecto: Enlaces Inalámbricos</strong></p>
+    <p>Realizado por: Ever José Xiloj Rivas</p>
+    <p>Bachillerato en Computación</p>
+
+</footer>
 
 </body>
 </html>
