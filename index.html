@@ -14,8 +14,8 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #080b1a;
-            color: #e8ecff;
+            background: #000000;
+            color: #cccccc;
             line-height: 1.7;
         }
 
@@ -28,44 +28,53 @@
             align-items: center;
             text-align: center;
             padding: 50px 20px;
+
             background:
-                radial-gradient(circle at top left, #3d1b78, transparent 40%),
-                radial-gradient(circle at bottom right, #064b83, transparent 40%),
-                linear-gradient(135deg, #080b1a, #111936);
-            border-bottom: 2px solid #5965ff;
+                radial-gradient(circle at top left, #5c0000, transparent 40%),
+                radial-gradient(circle at bottom right, #300000, transparent 40%),
+                linear-gradient(135deg, #080000, #1a0505);
+
+            border-bottom: 2px solid #ff2020;
+
+            box-shadow:
+                0 0 20px rgba(255, 0, 0, 0.35);
         }
 
         header h1 {
             font-size: 50px;
             margin: 0 0 10px;
             color: #ffffff;
+
             text-shadow:
-                0 0 10px #536dfe,
-                0 0 25px #7c4dff,
-                0 0 45px #00bfff;
+                0 0 10px #ff0000,
+                0 0 25px #ff3030,
+                0 0 45px #ff0000;
         }
 
         header p {
             font-size: 20px;
-            color: #bfc9ff;
+            color: #faf8f8;
             margin: 0;
         }
 
         /* MENÚ */
         nav {
-            background: rgba(7, 10, 30, 0.95);
+            background: rgba(34, 20, 20, 0.95);
             text-align: center;
             padding: 18px 10px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #3845a3;
-            box-shadow: 0 0 20px rgba(83, 109, 254, 0.25);
+
+            border-bottom: 1px solid #8f0000;
+
+            box-shadow:
+                0 0 20px rgba(255, 0, 0, 0.30);
         }
 
         nav a {
             display: inline-block;
-            color: #dce2ff;
+            color: #eeeeee;
             text-decoration: none;
             margin: 5px 8px;
             padding: 9px 15px;
@@ -77,9 +86,13 @@
 
         nav a:hover {
             color: white;
-            border-color: #6c63ff;
-            background: rgba(92, 70, 255, 0.18);
-            box-shadow: 0 0 12px #5c6cff;
+            border-color: #ff3030;
+            background: rgba(255, 0, 0, 0.15);
+
+            box-shadow:
+                0 0 12px #ff0000,
+                0 0 20px rgba(255, 0, 0, 0.4);
+
             transform: translateY(-2px);
         }
 
@@ -89,55 +102,74 @@
             max-width: 1050px;
             margin: 35px auto;
             padding: 32px;
+
             background: linear-gradient(
                 145deg,
-                rgba(20, 27, 58, 0.96),
-                rgba(13, 18, 40, 0.96)
+                rgba(30, 8, 8, 0.96),
+                rgba(15, 3, 3, 0.96)
             );
-            border: 1px solid #303c86;
+
+            border: 1px solid #5c1111;
             border-radius: 18px;
+
             box-shadow:
-                0 0 15px rgba(69, 86, 255, 0.18),
-                inset 0 0 20px rgba(90, 70, 255, 0.04);
+                0 0 15px rgba(255, 0, 0, 0.15),
+                inset 0 0 20px rgba(255, 0, 0, 0.03);
+
             transition: 0.3s;
         }
 
         section:hover {
-            border-color: #5969ff;
+            border-color: #ff3030;
+
             box-shadow:
-                0 0 25px rgba(83, 109, 254, 0.28),
-                inset 0 0 20px rgba(90, 70, 255, 0.06);
+                0 0 25px rgba(255, 0, 0, 0.45),
+                0 0 45px rgba(255, 0, 0, 0.15),
+                inset 0 0 20px rgba(255, 0, 0, 0.06);
         }
 
+        /* TÍTULOS */
         h2 {
-            color: #7c9cff;
+            color: #ff5555;
             font-size: 28px;
-            border-bottom: 2px solid #5666ff;
+
+            border-bottom: 2px solid #ff2020;
+
             padding-bottom: 10px;
-            text-shadow: 0 0 8px rgba(96, 112, 255, 0.6);
+
+            text-shadow:
+                0 0 8px rgba(255, 0, 0, 0.7);
         }
 
         h3 {
-            color: #8da9ff;
+            color: #ff6b6b;
             font-size: 21px;
+
+            text-shadow:
+                0 0 6px rgba(255, 0, 0, 0.4);
         }
 
         p {
-            color: #d4d9f2;
+            color: #d4d4d4;
         }
 
         /* INFORMACIÓN DESTACADA */
         .destacado {
             background: linear-gradient(
                 90deg,
-                rgba(40, 53, 130, 0.45),
-                rgba(91, 55, 150, 0.25)
+                rgba(100, 0, 0, 0.35),
+                rgba(50, 0, 0, 0.25)
             );
-            border-left: 4px solid #7c5cff;
+
+            border-left: 4px solid #ff2020;
+
             padding: 20px;
             margin: 22px 0;
+
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(124, 92, 255, 0.15);
+
+            box-shadow:
+                0 0 15px rgba(255, 0, 0, 0.25);
         }
 
         /* LISTAS */
@@ -147,11 +179,11 @@
 
         li {
             margin-bottom: 12px;
-            color: #d8def9;
+            color: #d8d8d8;
         }
 
         li::marker {
-            color: #7c8cff;
+            color: #ff3333;
         }
 
         /* TARJETAS */
@@ -165,28 +197,40 @@
             flex: 1;
             min-width: 250px;
             padding: 22px;
+
             background: linear-gradient(
                 145deg,
-                #141b3b,
-                #0e132b
+                #160606,
+                #090909
             );
-            border: 1px solid #35429b;
+
+            border: 1px solid #8a1111;
             border-radius: 15px;
+
             transition: 0.3s;
-            box-shadow: 0 0 12px rgba(72, 86, 255, 0.12);
+
+            box-shadow:
+                0 0 12px rgba(255, 0, 0, 0.22);
         }
 
+        /* BRILLO ROJO NEÓN */
         .tarjeta:hover {
             transform: translateY(-7px);
-            border-color: #6878ff;
+
+            border-color: #ff3030;
+
             box-shadow:
-                0 0 15px #5666ff,
-                0 0 30px rgba(120, 70, 255, 0.3);
+                0 0 15px #ff0000,
+                0 0 30px rgba(255, 0, 0, 0.55),
+                0 0 50px rgba(255, 0, 0, 0.20);
         }
 
         .tarjeta h3 {
             margin-top: 0;
-            color: #8ba5ff;
+            color: #ff5555;
+
+            text-shadow:
+                0 0 8px rgba(255, 0, 0, 0.5);
         }
 
         /* BOTÓN */
@@ -194,20 +238,32 @@
             display: inline-block;
             margin-top: 15px;
             padding: 12px 22px;
-            color: white;
+
+            color: rgb(0, 0, 0);
             text-decoration: none;
             font-weight: bold;
+
             border-radius: 25px;
-            background: linear-gradient(90deg, #4c5cff, #8b4dff);
-            box-shadow: 0 0 15px rgba(92, 76, 255, 0.5);
+
+            background: linear-gradient(
+                90deg,
+                #990000,
+                #ff2020
+            );
+
+            box-shadow:
+                0 0 15px rgba(255, 0, 0, 0.5);
+
             transition: 0.3s;
         }
 
         .boton:hover {
             transform: scale(1.05);
+
             box-shadow:
-                0 0 20px #6372ff,
-                0 0 35px #8b4dff;
+                0 0 20px #ff0000,
+                0 0 35px #ff3030,
+                0 0 50px rgba(255, 0, 0, 0.5);
         }
 
         /* PIE DE PÁGINA */
@@ -215,20 +271,31 @@
             margin-top: 50px;
             padding: 35px 20px;
             text-align: center;
+
             background:
-                linear-gradient(135deg, #070916, #101936);
-            border-top: 2px solid #4d5cff;
-            box-shadow: 0 -5px 25px rgba(74, 87, 255, 0.15);
+                linear-gradient(
+                    135deg,
+                    #3d0202,
+                    #700303
+                );
+
+            border-top: 2px solid #ff2020;
+
+            box-shadow:
+                0 -5px 25px rgb(255, 254, 254);
         }
 
         footer p {
             margin: 7px;
-            color: #b9c2ee;
+            color: #fcfcfc;
         }
 
         footer strong {
-            color: #8294ff;
+            color: #ff5555;
             font-size: 20px;
+
+            text-shadow:
+                0 0 10px #ff0000;
         }
 
         /* RESPONSIVE */
@@ -473,6 +540,7 @@
     <div class="tarjetas">
 
         <div class="tarjeta">
+
             <h3>✅ Ventajas</h3>
 
             <ul>
@@ -483,9 +551,11 @@
                 <li>Su instalación puede ser más sencilla que el cableado físico.</li>
                 <li>Permiten crear conexiones temporales o permanentes.</li>
             </ul>
+
         </div>
 
         <div class="tarjeta">
+
             <h3>⚠️ Desventajas</h3>
 
             <ul>
@@ -495,6 +565,7 @@
                 <li>Una red inalámbrica mal protegida puede presentar riesgos de seguridad.</li>
                 <li>La velocidad y estabilidad pueden variar dependiendo del entorno.</li>
             </ul>
+
         </div>
 
     </div>
@@ -573,7 +644,7 @@
 
 <footer>
 
-    <p><strong>🌌 PROYECTO: ENLACES INALÁMBRICOS</strong></p>
+    <p><strong> PROYECTO: ENLACES INALÁMBRICOS</strong></p>
     <p>Realizado por: Ever José Xiloj Rivas</p>
     <p>Bachillerato en Computación</p>
 
